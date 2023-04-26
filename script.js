@@ -101,6 +101,10 @@ function operate(a, b, operator){
                 result = a / b;
         }
     }
+
+    if (result.toString().length > 16){
+        return "ERROR";
+    }
     
     return Math.floor(result) === result ? result : result.toFixed(3);
 }
