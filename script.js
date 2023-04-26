@@ -13,6 +13,7 @@ const clearBtn = document.querySelector("#clear");
 const deleteBtn = document.querySelector("#delete");
 
 const equalBtn = document.querySelector("#equals");
+const dot = document.querySelector("#dot");
 
 operatorArray.map(button => {
     button.addEventListener("click", e => {
@@ -57,6 +58,14 @@ deleteBtn.addEventListener("click", () => {
     }
 });
 
+dot.addEventListener("click", () => {
+    if (mainPara.innerText.includes(".") || mainPara.innerText.length === 0){
+        return;
+    }
+
+    mainPara.innerText += ".";
+})
+
 equalBtn.addEventListener("click", () => {
     if(mainPara.innerText.length === 0 || previousPara.innerText.length === 0){
         return;
@@ -73,14 +82,25 @@ equalBtn.addEventListener("click", () => {
 
 
 function operate(a, b, operator){
+    let result = 0;
+
     switch (operator){
         case "+":
-            return a + b;
+            result = a + b;
+            break;
         case "-":
-            return a - b;
+            result = a - b;
+            break;
         case "\xD7":
-            return a * b;
-        case "\xF7":
-            return b === 0 ? "ERROR" : a / b;
+            result = a * b;
+            break;
+        case "\xF7":{
+            if (b === 0)
+                return "ERROR";
+            else
+                result = a / b;
+        }
     }
+    
+    return Math.floor(result) === result ? result : result.toFixed(3);
 }
