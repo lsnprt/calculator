@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-body{
+    border: 2px solid #0A0903;
+    box-shadow: 4px 4px 10px 4px #1b1b1b;
+    background-color: #C3C48D;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 480px;
+    width: 300px;
+    gap: 12px;
+    padding: 40px 40px 20px 40px;
+}
+
+.calc-screen{
+    min-width: 90%;
+    min-height: 20%;
+    border: 8px solid #ED7D3A;
+    background-color: #0A0903;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    justify-content: end;
+    margin-bottom: 18px;
+    color: #35A7FF;
+    font-family: 'VT323', monospace;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+#previous, .operator{
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+#main{
+    font-size: 36px;
+    margin: 0;
+}
+
+.operator{
+    margin-right: 5%;
+}
+
+.calc-numpad{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clear-and-delete{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.clear-and-delete > button{
+    padding: 18px 24px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-radius: 8px;
+    background-color: #ED7D3A;
+    color: #0A0903;
+    font-size: 18px;
+    font-family: 'Bungee', cursive;
+    letter-spacing: 4px;
+}
+
+.numbers-and-operands{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.numbers-and-operands > button {
+    flex-grow: 1;
+    font-weight: 500;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 20%;
+    height: 20%;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Bungee', cursive;
+    color:#1b1b1b;
+}
+
+.made-by{
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.made-by > p{
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-family: "VT323", monospace;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.operation{
+    background-color: #a8a2a8;
+}
