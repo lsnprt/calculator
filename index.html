@@ -11,10 +11,11 @@
     <div class="calc-body">
         <div class="calc-screen">
             <div class="numbers">
-                <p id="previous">123</p>
-                <p id="main">456</p>
+                <p id="previous"></p>
+                <p id="main">0</p>
             </div>
-            <div class="operator">+</div>
+            <div class="operator"></div>
+            <div>&nbsp;</div>
         </div>
         <div class="calc-numpad">
             <div class="clear-and-delete">
@@ -22,21 +23,21 @@
                 <button id="delete">DELETE</button>
             </div>
             <div class="numbers-and-operands">
-                <button class="calc-button">1</button>
-                <button class="calc-button">2</button>
-                <button class="calc-button">3</button>
+                <button class="calc-button digit">1</button>
+                <button class="calc-button digit">2</button>
+                <button class="calc-button digit">3</button>
                 <button class="calc-button operation">+</button>
-                <button class="calc-button">4</button>
-                <button class="calc-button">5</button>
-                <button class="calc-button">6</button>
+                <button class="calc-button digit">4</button>
+                <button class="calc-button digit">5</button>
+                <button class="calc-button digit">6</button>
                 <button class="calc-button operation">-</button>
-                <button class="calc-button">7</button>
-                <button class="calc-button">8</button>
-                <button class="calc-button">9</button>
+                <button class="calc-button digit">7</button>
+                <button class="calc-button digit">8</button>
+                <button class="calc-button digit">9</button>
                 <button class="calc-button operation">&times;</button>
-                <button class="calc-button">.</button>
-                <button class="calc-button">0</button>
-                <button class="calc-button operation">=</button>
+                <button class="calc-button" id="dot">.</button>
+                <button class="calc-button digit">0</button>
+                <button class="calc-button" id="equals">=</button>
                 <button class="calc-button operation">&divide;</button>    
             </div>
         </div>
