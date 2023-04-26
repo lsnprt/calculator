@@ -29,6 +29,16 @@ operatorArray.map(button => {
 digitArray.map(button => {
     button.addEventListener("click", e => {
         const target = e.target.textContent;
+
+        if(mainPara.textContent === "0"){
+            if (target == 0){
+                return;
+            }
+
+            mainPara.textContent = target;
+            return;
+        }
+
         if(mainPara.textContent.length <= 10){
             mainPara.innerText += target; 
         }
@@ -38,13 +48,12 @@ digitArray.map(button => {
 clearBtn.addEventListener("click", () => {
     operatorDiv.innerText = "";
     previousPara.innerText = "";
-    mainPara.innerText = "";
+    mainPara.innerText = "0";
 });
 
 deleteBtn.addEventListener("click", () => {
     if (mainPara.innerText.length > 0){
-        mainPara.innerText = mainPara.innerText.slice(0, -1);
-
+        mainPara.innerText = mainPara.textContent.length === 1 ? "0" : mainPara.innerText.slice(0, -1);
     }
 });
 
