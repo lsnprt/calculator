@@ -1,10 +1,13 @@
+//Screen elements
+
 const operatorDiv = document.querySelector(".operator");
+const mainPara = document.querySelector("#main");
+const previousPara = document.querySelector("#previous");
+
+//Button elements
 
 const operatorNodes = document.querySelectorAll(".operation");
 const operatorArray = Array.from(operatorNodes);
-
-const mainPara = document.querySelector("#main");
-const previousPara = document.querySelector("#previous");
 
 const digitNodes = document.querySelectorAll(".digit");
 const digitArray = Array.from(digitNodes);
@@ -14,6 +17,8 @@ const deleteBtn = document.querySelector("#delete");
 
 const equalBtn = document.querySelector("#equals");
 const dot = document.querySelector("#dot");
+
+//Button Logic
 
 operatorArray.map(button => {
     button.addEventListener("click", e => {
@@ -80,6 +85,7 @@ equalBtn.addEventListener("click", () => {
     operatorDiv.innerText = "";
 })
 
+//Calculator function
 
 function operate(a, b, operator){
     let result = 0;
